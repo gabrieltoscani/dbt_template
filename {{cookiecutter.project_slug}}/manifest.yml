@@ -1,17 +1,17 @@
 features:
   - name: is_postgres_database
-    enabled: {%- if cookiecutter.database_type == "postgres" -%} true {%- else -%} false {%- endif -%}
+    enabled: {% if cookiecutter.database_type == "postgres" %} true {% else %} false {% endif %}
     resources:
       - models/staging/example_postgres.sql
       - models/staging/second_example_postgres.sql
 
   - name: is_redshift_database
-    enabled: {%- if cookiecutter.database_type == "redshift" -%} true {%- else -%} false {%- endif -%}
+    enabled: {% if cookiecutter.database_type == "redshift" %} true {% else %} false {% endif %}
     resources:
       - models/staging/example_redshift.sql
       - models/staging/second_example_redshift.sql
 
   - name: is_bigquery_database
-    enabled: {%- if cookiecutter.database_type == "bigquery" -%} true {%- else -%} false {%- endif -%}
+    enabled: {% if cookiecutter.database_type == "bigquery" %} true {% else %} false {% endif %}
     resources:
       - models/staging/example_bigquery.sql

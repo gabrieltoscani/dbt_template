@@ -2,6 +2,7 @@ import os
 import shutil
 import yaml
 
+print(os.listdir())
 MANIFEST = "manifest.yml"
 
 def delete_resources_for_disabled_features():

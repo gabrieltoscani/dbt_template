@@ -1,0 +1,32 @@
+[sqlfluff]
+templater = dbt
+dialect = postgres
+exclude_rules = L031, L016, L025, L034
+
+[sqlfluff:indentation]
+indented_joins = False
+
+[sqlfluff:templater:dbt]
+apply_dbt_builtins = True
+
+[sqlfluff:templater:dbt:macros]
+dbt_utils = {% macro dbt_utils() %}{% endmacro %}
+
+[sqlfluff:rules:L003]
+tab_space_size = 4
+indent_unit = space
+lint_templated_tokens = true
+
+[sqlfluff:rules:L010]
+capitalisation_policy = lower
+
+[sqlfluff:rules:L016]
+max_line_length = 120
+tab_space_size = 4
+indent_unit = space
+
+[sqlfluff:rules:L019]
+comma_style = leading
+
+[sqlfluff:rules:L030]
+capitalisation_policy = lower

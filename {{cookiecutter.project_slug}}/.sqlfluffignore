@@ -1,0 +1,9 @@
+dbt_distritec/analysis/
+dbt_distritec/data/
+dbt_distritec/dbt_modules/
+dbt_distritec/ecs_task_definition/
+dbt_distritec/logs/
+dbt_distritec/macros/
+dbt_distritec/target/
+dbt_distritec/tests/
+.

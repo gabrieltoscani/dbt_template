@@ -1,7 +1,7 @@
 default:
-    target: {{ cookiecutter.target_schema }}
+    target: {{ cookiecutter.target }}
     outputs:
-      {{ cookiecutter.target_schema }}:
+      {{ cookiecutter.target }}:
         type: {{ cookiecutter.database_type }}
 
         # More information for the options in this file
@@ -40,7 +40,7 @@ default:
 
         # Set the TEST_DATABASE in your CI
         dbname: {% raw %}"{{ env_var('DBT_DATABASE') }}"{% endraw %}
-        schema: {{ cookiecutter.target_schema }}
+        schema: {% raw %}"{{ env_var('DBT_USER') }}"{% endraw %}
 
         # Set variable DBT_USER in your CI
         user: {% raw %}"{{ env_var('DBT_USER') }}"{% endraw %}
