@@ -1,0 +1,23 @@
+
+{
+      "project_name": "My dbt template",
+      "project_slug": "{{ cookiecutter.project_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+      "user_name": "indicium",
+      "database_type": [
+          "postgres",
+          "redshift",
+          "bigquery"
+      ],
+      "target_schema_dev": "dbt_{{ cookiecutter.user_name.lower()|replace(' ', '_')|replace('-', '_')|replace('.', '_')|trim() }}",
+      "target_schema_prod": "public",
+      "run_git_init": [
+          "Yes",
+          "No"
+      ],
+      "ci_tool": [
+          "None",
+          "GitHub",
+          "GitLab"
+      ]
+      
+  }
