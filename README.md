@@ -15,7 +15,7 @@ Powered by Cookiecutter, Cookiecutter dbt is a framework for jumpstarting produc
 
 ```
 pip install "cookiecutter>=1.7.0"
-cookiecutter gh:datacoves/cookiecutter-dbt
+cookiecutter https://github.com/gabrieltoscani/dbt_template.git
 ```
 
 ## Usage
