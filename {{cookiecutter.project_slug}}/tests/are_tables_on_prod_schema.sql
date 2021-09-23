@@ -3,7 +3,7 @@ with staging_schema as (
         table_schema
         , count(*) as total_tables
     from information_schema.tables
-    where table_schema = 'public_stg_dialogo' 
+    where table_schema = '{{cookiecutter.target_schema_dev}}' 
     group by table_schema
     )
     , prod_schema as (
